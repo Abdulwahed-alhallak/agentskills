@@ -70,7 +70,7 @@ skills-ref to-prompt path/to/skill-a path/to/skill-b
 
 ```python
 from pathlib import Path
-from skills_ref import validate, read_properties, to_prompt
+from antigravity.skills_ref import validate, read_properties, to_prompt
 
 # Validate a skill directory
 problems = validate(Path("my-skill"))
@@ -111,3 +111,14 @@ The `<location>` element tells the agent where to find the full skill instructio
 ## License
 
 Apache 2.0
+
+import sys
+sys.path.insert(0, r"C:\Users\DION-SERVER\Documents\GitHub-Repository")
+
+from antigravity.skills_ref import validate
+
+skill_dir = r"C:\Users\DION-SERVER\Documents\GitHub-Repository\agentskills\some-skill"
+
+# تحقق من صلاحية مجلد المهارة
+errors = validate(skill_dir)
+print(errors)
